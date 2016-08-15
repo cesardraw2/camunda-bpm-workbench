@@ -1,9 +1,9 @@
 FROM camunda/camunda-bpm-platform:wildfly-latest
 
 ENV VERSION=1.0.0-alpha9 \
-    GITHUB=https://github.com/camunda/camunda-bpm-workbench
+    GITHUB=https://github.com/cesardraw2/camunda-bpm-workbench
 
-ADD ${GITHUB}/releases/download/${VERSION}/camunda-workbench-dist-embeddable-${VERSION}.jar /camunda/lib/
+ADD ${GITHUB}/blob/master/distro/embeddable/camunda-workbench-dist-embeddable-1.0.0-alpha9.jar /camunda/lib/
 
 RUN xmlstarlet ed -L \
       -s //_:process-engine/_:plugins -t elem -n TMP -v "" \
