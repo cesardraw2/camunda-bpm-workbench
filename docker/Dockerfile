@@ -1,4 +1,4 @@
-FROM camunda/camunda-bpm-platform:tomcat-latest
+FROM camunda/camunda-bpm-platform:wildfly-latest
 
 ENV VERSION=1.0.0-alpha9 \
     GITHUB=https://github.com/camunda/camunda-bpm-workbench
